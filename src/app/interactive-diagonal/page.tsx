@@ -37,8 +37,9 @@ const InteractveDiagonal = () => {
     }
 
     return (
-        <div className="bg-white p-10 w-max">
-            <div className="border border border-black">
+        <div className="bg-white p-10 w-max w-screen h-screen">
+            <div className="text-3xl text-black font-bold flex justify-center mb-10 w-full">Interactive Diagonal</div>
+            <div className="border border border-black w-min mx-auto">
                 {
                     data?.map((row: any, rowIndex: number) => {
                         return (

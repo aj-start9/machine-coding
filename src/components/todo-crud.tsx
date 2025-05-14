@@ -35,22 +35,21 @@ const ToDoCrud = () => {
         title: "kjQKJbwejbswvjs hj shd vh",
         type: 'done',
         jobNo: 'PROD-6'
-    },
+    }])
 
 
-    ])
-
-    const idElement: any = document.getElementById(clickId)
 
     useEffect(() => {
+        let idElement: any = document?.getElementById(clickId)
         if (idElement) {
             document.body.addEventListener('click', (e: any) => {
                 if (!idElement?.contains(e.target)) {
                     setClickId('')
+                    idElement = ""
                 }
             })
         }
-    }, [idElement])
+    })
 
     const getList = (jobNo: string) => {
         const Lists = [
@@ -81,8 +80,9 @@ const ToDoCrud = () => {
         )
     }
 
-    const renderTodoList =  (type: string) => {
+    const renderTodoList = (type: string) => {
         const todoArray = allJobs.filter((itm: any) => itm?.type === type)
+
         return (
             <div className="flex flex-col gap-y-2 pb-5">
                 {

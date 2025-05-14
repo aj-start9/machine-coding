@@ -11,6 +11,10 @@ export default function Home() {
     {
       name: 'Nested Checkbox',
       link: 'nested-checkbox'
+    },
+    {
+      name: 'To Do List',
+      link: 'to-do'
     }
   ]
 
